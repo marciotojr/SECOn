@@ -8,7 +8,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:sioc="http://rdfs.org/sioc/ns#"
      xmlns:history="http://se-on.org/ontologies/domain-specific/2012/02/history.owl">
-    <owl:Ontology rdf:about="http://marciotojr.com.br/ontologies/SECOn">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl">
         <owl:imports rdf:resource="http://rdfs.org/sioc/ns#"/>
         <owl:imports rdf:resource="http://se-on.org/ontologies/domain-specific/2012/02/history.owl"/>
         <owl:imports rdf:resource="http://se-on.org/ontologies/domain-specific/2012/02/issues.owl"/>
@@ -27,149 +27,149 @@
     
 
 
-    <!-- http://marciotojr.com.br/ontologies/SECOn#complements -->
+    <!-- http://rdfs.org/sioc/ns#follows -->
 
-    <owl:ObjectProperty rdf:about="http://marciotojr.com.br/ontologies/SECOn#complements">
-        <rdfs:domain rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Component"/>
+    <rdf:Description rdf:about="http://rdfs.org/sioc/ns#follows">
+        <rdfs:range rdf:resource="http://rdfs.org/sioc/ns#Container"/>
+        <rdfs:range rdf:resource="http://rdfs.org/sioc/ns#Space"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Repository"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#complements -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#complements">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Component"/>
         <rdfs:range rdf:resource="http://se-on.org/ontologies/general/2012/02/main.owl#Product"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://marciotojr.com.br/ontologies/SECOn#composes -->
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#composes -->
 
-    <owl:ObjectProperty rdf:about="http://marciotojr.com.br/ontologies/SECOn#composes">
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#composes">
         <rdfs:domain rdf:resource="http://se-on.org/ontologies/general/2012/2/main.owl#Artifact"/>
         <rdfs:range rdf:resource="http://se-on.org/ontologies/general/2012/02/main.owl#Product"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://marciotojr.com.br/ontologies/SECOn#develops -->
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#develops -->
 
-    <owl:ObjectProperty rdf:about="http://marciotojr.com.br/ontologies/SECOn#develops">
-        <rdfs:domain rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Entity"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#develops">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Entity"/>
         <rdfs:range rdf:resource="http://se-on.org/ontologies/general/2012/02/main.owl#Product"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://marciotojr.com.br/ontologies/SECOn#hasMessage -->
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#hasMessage -->
 
-    <owl:ObjectProperty rdf:about="http://marciotojr.com.br/ontologies/SECOn#hasMessage">
-        <rdfs:domain rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Commit"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#hasMessage">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Commit"/>
         <rdfs:range rdf:resource="http://rdfs.org/sioc/ns#Post"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://marciotojr.com.br/ontologies/SECOn#hasSocialNetwork -->
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#hasSocialNetwork -->
 
-    <owl:ObjectProperty rdf:about="http://marciotojr.com.br/ontologies/SECOn#hasSocialNetwork">
-        <rdfs:domain rdf:resource="http://marciotojr.com.br/ontologies/SECOn#SoftwareEcosystem"/>
-        <rdfs:range rdf:resource="http://marciotojr.com.br/ontologies/SECOn#SocialNetwork"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#hasSocialNetwork">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#SoftwareEcosystem"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#SocialNetwork"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://marciotojr.com.br/ontologies/SECOn#hosts -->
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#hosts -->
 
-    <owl:ObjectProperty rdf:about="http://marciotojr.com.br/ontologies/SECOn#hosts">
-        <rdfs:domain rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Repository"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#hosts">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Repository"/>
         <rdfs:range rdf:resource="http://se-on.org/ontologies/general/2012/02/main.owl#Product"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://marciotojr.com.br/ontologies/SECOn#isAcquantedWith -->
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#isAcquantedWith -->
 
-    <owl:ObjectProperty rdf:about="http://marciotojr.com.br/ontologies/SECOn#isAcquantedWith">
-        <rdfs:domain rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Individual"/>
-        <rdfs:range rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Topic"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#isAcquantedWith">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Individual"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Topic"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://marciotojr.com.br/ontologies/SECOn#isCommitedTo -->
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#isCommitedTo -->
 
-    <owl:ObjectProperty rdf:about="http://marciotojr.com.br/ontologies/SECOn#isCommitedTo">
-        <rdfs:domain rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Commit"/>
-        <rdfs:range rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Repository"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#isCommitedTo">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Commit"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Repository"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://marciotojr.com.br/ontologies/SECOn#isPartOfConsortium -->
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#isPartOfConsortium -->
 
-    <owl:ObjectProperty rdf:about="http://marciotojr.com.br/ontologies/SECOn#isPartOfConsortium">
-        <rdfs:domain rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Company"/>
-        <rdfs:range rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Consortium"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#isPartOfConsortium">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Company"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Consortium"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://marciotojr.com.br/ontologies/SECOn#isPartOfEcosystem -->
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#isPartOfEcosystem -->
 
-    <owl:ObjectProperty rdf:about="http://marciotojr.com.br/ontologies/SECOn#isPartOfEcosystem">
-        <rdfs:range rdf:resource="http://marciotojr.com.br/ontologies/SECOn#SoftwareEcosystem"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#isPartOfEcosystem">
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#SoftwareEcosystem"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://marciotojr.com.br/ontologies/SECOn#isPartOfSocialNetwork -->
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#isPartOfSocialNetwork -->
 
-    <owl:ObjectProperty rdf:about="http://marciotojr.com.br/ontologies/SECOn#isPartOfSocialNetwork">
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#isPartOfSocialNetwork">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://marciotojr.com.br/ontologies/SECOn#Entity"/>
-                    <rdf:Description rdf:about="http://marciotojr.com.br/ontologies/SECOn#Software"/>
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Entity"/>
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Software"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://marciotojr.com.br/ontologies/SECOn#SocialNetwork"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#SocialNetwork"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://marciotojr.com.br/ontologies/SECOn#isPartOfEcosystem"/>
-            <rdf:Description rdf:about="http://marciotojr.com.br/ontologies/SECOn#hasSocialNetwork"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#isPartOfEcosystem"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#hasSocialNetwork"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://marciotojr.com.br/ontologies/SECOn#requiresKnowledge -->
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#requiresKnowledge -->
 
-    <owl:ObjectProperty rdf:about="http://marciotojr.com.br/ontologies/SECOn#requiresKnowledge">
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#requiresKnowledge">
         <rdfs:domain rdf:resource="http://se-on.org/ontologies/general/2012/02/main.owl#Product"/>
-        <rdfs:range rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Topic"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Topic"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://marciotojr.com.br/ontologies/SECOn#worksIn -->
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#worksIn -->
 
-    <owl:ObjectProperty rdf:about="http://marciotojr.com.br/ontologies/SECOn#worksIn">
-        <rdfs:domain rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Individual"/>
-        <rdfs:range rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Institution"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#worksIn">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Individual"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Institution"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://marciotojr.com.br/ontologies/SECOn#worksWith -->
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#worksWith -->
 
-    <owl:ObjectProperty rdf:about="http://marciotojr.com.br/ontologies/SECOn#worksWith">
-        <rdfs:domain rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Individual"/>
-        <rdfs:range rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Individual"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#worksWith">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Individual"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Individual"/>
     </owl:ObjectProperty>
-    
-
-
-    <!-- http://rdfs.org/sioc/ns#follows -->
-
-    <rdf:Description rdf:about="http://rdfs.org/sioc/ns#follows">
-        <rdfs:range rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Repository"/>
-        <rdfs:range rdf:resource="http://rdfs.org/sioc/ns#Container"/>
-        <rdfs:range rdf:resource="http://rdfs.org/sioc/ns#Space"/>
-    </rdf:Description>
     
 
 
@@ -184,133 +184,153 @@
     
 
 
-    <!-- http://marciotojr.com.br/ontologies/SECOn#Commit -->
-
-    <owl:Class rdf:about="http://marciotojr.com.br/ontologies/SECOn#Commit"/>
-    
-
-
-    <!-- http://marciotojr.com.br/ontologies/SECOn#Company -->
-
-    <owl:Class rdf:about="http://marciotojr.com.br/ontologies/SECOn#Company">
-        <rdfs:subClassOf rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Institution"/>
-        <owl:disjointWith rdf:resource="http://marciotojr.com.br/ontologies/SECOn#FOSSFoundation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://marciotojr.com.br/ontologies/SECOn#Component -->
-
-    <owl:Class rdf:about="http://marciotojr.com.br/ontologies/SECOn#Component">
-        <rdfs:subClassOf rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Software"/>
-    </owl:Class>
-    
-
-
-    <!-- http://marciotojr.com.br/ontologies/SECOn#Consortium -->
-
-    <owl:Class rdf:about="http://marciotojr.com.br/ontologies/SECOn#Consortium">
-        <rdfs:subClassOf rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Institution"/>
-    </owl:Class>
-    
-
-
-    <!-- http://marciotojr.com.br/ontologies/SECOn#Entity -->
-
-    <owl:Class rdf:about="http://marciotojr.com.br/ontologies/SECOn#Entity">
-        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
-    </owl:Class>
-    
-
-
-    <!-- http://marciotojr.com.br/ontologies/SECOn#FOSSFoundation -->
-
-    <owl:Class rdf:about="http://marciotojr.com.br/ontologies/SECOn#FOSSFoundation">
-        <rdfs:subClassOf rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Institution"/>
-    </owl:Class>
-    
-
-
-    <!-- http://marciotojr.com.br/ontologies/SECOn#Individual -->
-
-    <owl:Class rdf:about="http://marciotojr.com.br/ontologies/SECOn#Individual">
-        <owl:equivalentClass rdf:resource="http://rdfs.org/sioc/ns#UserAccount"/>
-        <rdfs:subClassOf rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Entity"/>
-    </owl:Class>
-    
-
-
-    <!-- http://marciotojr.com.br/ontologies/SECOn#Institution -->
-
-    <owl:Class rdf:about="http://marciotojr.com.br/ontologies/SECOn#Institution">
-        <rdfs:subClassOf rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Entity"/>
-    </owl:Class>
-    
-
-
-    <!-- http://marciotojr.com.br/ontologies/SECOn#Platform -->
-
-    <owl:Class rdf:about="http://marciotojr.com.br/ontologies/SECOn#Platform">
-        <rdfs:subClassOf rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Software"/>
-    </owl:Class>
-    
-
-
-    <!-- http://marciotojr.com.br/ontologies/SECOn#Repository -->
-
-    <owl:Class rdf:about="http://marciotojr.com.br/ontologies/SECOn#Repository"/>
-    
-
-
-    <!-- http://marciotojr.com.br/ontologies/SECOn#Skillset -->
-
-    <owl:Class rdf:about="http://marciotojr.com.br/ontologies/SECOn#Skillset"/>
-    
-
-
-    <!-- http://marciotojr.com.br/ontologies/SECOn#SocialNetwork -->
-
-    <owl:Class rdf:about="http://marciotojr.com.br/ontologies/SECOn#SocialNetwork"/>
-    
-
-
-    <!-- http://marciotojr.com.br/ontologies/SECOn#Software -->
-
-    <owl:Class rdf:about="http://marciotojr.com.br/ontologies/SECOn#Software">
-        <rdfs:subClassOf rdf:resource="http://se-on.org/ontologies/general/2012/02/main.owl#Product"/>
-    </owl:Class>
-    
-
-
-    <!-- http://marciotojr.com.br/ontologies/SECOn#SoftwareEcosystem -->
-
-    <owl:Class rdf:about="http://marciotojr.com.br/ontologies/SECOn#SoftwareEcosystem"/>
-    
-
-
-    <!-- http://marciotojr.com.br/ontologies/SECOn#Topic -->
-
-    <owl:Class rdf:about="http://marciotojr.com.br/ontologies/SECOn#Topic"/>
-    
-
-
     <!-- http://rdfs.org/sioc/ns#UserAccount -->
 
-    <rdf:Description rdf:about="http://rdfs.org/sioc/ns#UserAccount"/>
+    <rdf:Description rdf:about="http://rdfs.org/sioc/ns#UserAccount">
+        <owl:equivalentClass rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Individual"/>
+    </rdf:Description>
     
 
 
     <!-- http://se-on.org/ontologies/general/2012/02/main.owl#Product -->
 
     <rdf:Description rdf:about="http://se-on.org/ontologies/general/2012/02/main.owl#Product">
-        <rdfs:subClassOf rdf:resource="http://marciotojr.com.br/ontologies/SECOn#Entity"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Entity"/>
     </rdf:Description>
     
 
 
     <!-- http://xmlns.com/foaf/0.1/OnlineAccount -->
 
-    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/OnlineAccount">
+        <owl:equivalentClass rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Entity"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Commit -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Commit"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Company -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Company">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Institution"/>
+        <owl:disjointWith rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#FOSSFoundation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Component -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Component">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Consortium -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Consortium">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Institution"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Entity -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Entity"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#FOSSFoundation -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#FOSSFoundation">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Institution"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Individual -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Individual">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Institution -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Institution">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Platform -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Platform">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Repository -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Repository"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Skillset -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Skillset"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#SocialNetwork -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#SocialNetwork"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Software -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Software">
+        <rdfs:subClassOf rdf:resource="http://se-on.org/ontologies/general/2012/02/main.owl#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#SoftwareEcosystem -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#SoftwareEcosystem"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Topic -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#Topic"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#nodejs -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#nodejs">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/development/SECOn.owl#SoftwareEcosystem"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
