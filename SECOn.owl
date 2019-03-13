@@ -104,14 +104,16 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#isAcquantedWith -->
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#isAcquaintedWith -->
 
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#isAcquantedWith">
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#Individual"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#Topic"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#isAcquaintedWith">
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#develops"/>
             <rdf:Description rdf:about="http://se-on.org/ontologies/general/2012/2/main.owl#dependsOn"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#develops"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#requiresKnowledge"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -169,6 +171,25 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#isRequiredBy -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#isRequiredBy">
+        <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#requiresKnowledge"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#mayCollaborateWith -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#mayCollaborateWith">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#isAcquaintedWith"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#isRequiredBy"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#requiresKnowledge -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#requiresKnowledge">
@@ -208,6 +229,14 @@
     
 
 
+    <!-- http://rdfs.org/sioc/ns#id -->
+
+    <rdf:Description rdf:about="http://rdfs.org/sioc/ns#id">
+        <owl:equivalentProperty rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasId"/>
+    </rdf:Description>
+    
+
+
     <!-- http://se-on.org/ontologies/general/2012/02/main.owl#hasDescription -->
 
     <rdf:Description rdf:about="http://se-on.org/ontologies/general/2012/02/main.owl#hasDescription">
@@ -224,11 +253,35 @@
     
 
 
+    <!-- http://se-on.org/ontologies/general/2012/02/main.owl#hasIdentifier -->
+
+    <rdf:Description rdf:about="http://se-on.org/ontologies/general/2012/02/main.owl#hasIdentifier">
+        <rdfs:subPropertyOf rdf:resource="http://rdfs.org/sioc/ns#id"/>
+    </rdf:Description>
+    
+
+
     <!-- http://se-on.org/ontologies/general/2012/02/main.owl#hasName -->
 
     <rdf:Description rdf:about="http://se-on.org/ontologies/general/2012/02/main.owl#hasName">
         <owl:equivalentProperty rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasName"/>
     </rdf:Description>
+    
+
+
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasCity -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasCity">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasCountry -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasCountry">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -244,6 +297,14 @@
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasEmail">
         <rdfs:subPropertyOf rdf:resource="http://se-on.org/ontologies/general/2012/02/main.owl#hasEmail"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasId -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasId">
+        <rdfs:subPropertyOf rdf:resource="http://rdfs.org/sioc/ns#id"/>
     </owl:DatatypeProperty>
     
 
@@ -279,6 +340,24 @@
 
     <rdf:Description rdf:about="http://rdfs.org/sioc/ns#UserAccount">
         <owl:equivalentClass rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#Individual"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://se-on.org/ontologies/general/2012/02/main.owl#Developer -->
+
+    <rdf:Description rdf:about="http://se-on.org/ontologies/general/2012/02/main.owl#Developer">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#Individual"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#develops"/>
+                        <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#Software"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </rdf:Description>
     
 
@@ -403,57 +482,6 @@
     <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#Topic -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#Topic"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#express -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#express">
-        <hosts rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#express"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#igor -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#igor">
-        <worksWith rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#marciotojr"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#marciotojr -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#marciotojr">
-        <develops rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#newproceg"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#newproceg -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#newproceg">
-        <main1:dependsOn rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#express"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#phillipe -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#phillipe">
-        <worksWith rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#marciotojr"/>
-    </owl:NamedIndividual>
 </rdf:RDF>
 
 
