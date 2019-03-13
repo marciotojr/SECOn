@@ -264,7 +264,7 @@
     <!-- http://se-on.org/ontologies/general/2012/02/main.owl#hasName -->
 
     <rdf:Description rdf:about="http://se-on.org/ontologies/general/2012/02/main.owl#hasName">
-        <owl:equivalentProperty rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasName"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasName"/>
     </rdf:Description>
     
 
@@ -311,9 +311,7 @@
 
     <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasName -->
 
-    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasName">
-        <rdfs:subPropertyOf rdf:resource="http://se-on.org/ontologies/general/2012/02/main.owl#hasName"/>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasName"/>
     
 
 
