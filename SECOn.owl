@@ -34,9 +34,6 @@
 
     <rdf:Description rdf:about="http://rdfs.org/sioc/ns#follows">
         <owl:equivalentProperty rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#follows"/>
-        <rdfs:range rdf:resource="http://rdfs.org/sioc/ns#Container"/>
-        <rdfs:range rdf:resource="http://rdfs.org/sioc/ns#Space"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#Repository"/>
     </rdf:Description>
     
 
