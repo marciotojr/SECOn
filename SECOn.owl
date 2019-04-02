@@ -40,6 +40,19 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#collaboresWith -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#collaboresWith">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#Entity"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#Entity"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#develops"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#isDevelopedBy"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#complements -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#complements">
@@ -190,6 +203,22 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#owns -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#owns">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#Entity"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://se-on.org/ontologies/general/2012/02/main.owl#Product"/>
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#Repository"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#requiresKnowledge -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#requiresKnowledge">
@@ -204,16 +233,6 @@
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#worksIn">
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#Individual"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#Institution"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#worksWith -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#worksWith">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#Entity"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#Entity"/>
     </owl:ObjectProperty>
     
 
@@ -272,6 +291,7 @@
     <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasCity -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasCity">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasLocation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -280,6 +300,7 @@
     <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasCountry -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasCountry">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasLocation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -306,6 +327,20 @@
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasId">
         <rdfs:subPropertyOf rdf:resource="http://rdfs.org/sioc/ns#id"/>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasLocation -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasLocation">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasLogin -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/marciotojr/SECOn/teste/SECOn.owl#hasLogin"/>
     
 
 
